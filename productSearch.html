@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Search</title>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="DataController.js"></script>
+    <script src="dataservice.js"></script>
+</head>
+<body>
+<header class="page-header">
+    <h1>Product List</h1>
+</header>
+<div ng-controller="DataController as vm">
+
+
+    <div class="col-md-6 col-md-offset-3 jumbotron">
+        <p><input type="search" ng-model="search" placeholder="Search"></p>
+        <table class="table table-striped">
+            <thead>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            </thead>
+
+            <tr ng-repeat="j in vm.empl | filter: search">
+                <td>{{j.pcode}}</td>
+                <td>{{j.pname}}</td>
+                <td>{{j.price}}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Search</title>
+    <link href="../bootstrap.css" rel="stylesheet">
+    <script src="../angular.min.js"></script>
+</head>
+<body>
+<header class="page-header">
+    <h1>Product List</h1>
+</header>
+    <div ng-app="" ng-init="p=[{pcode:'E91',pname:'Apple Iphone 7 plus',price:'$868'},
+        {pcode:'E91',pname:'Apple Iphone 7 plus 128 GB',price:'$868'},
+        {pcode:'E92',pname:'Samsung Galaxy S8',price:'$840'},
+        {pcode:'E93',pname:'Apple Iphone 7 plus 32 GB',price:'$768'},
+        {pcode:'E94',pname:'LG V5',price:'$800'},
+        {pcode:'E95',pname:'Google Pixel',price:'$1000'},
+        {pcode:'E96',pname:'Samsung Note 8',price:'$1100'},
+        {pcode:'E97',pname:'Zte Max PRO',price:'$99'},
+        {pcode:'E98',pname:'LG Aristo',price:'$70'},
+        {pcode:'E99',pname:'Samsung J7',price:'$199'},
+        {pcode:'E100',pname:'LG Stylo 3 plus',price:'$229'},
+        ]">
+
+
+    <div class="col-md-6 col-md-offset-3 jumbotron">
+        <p><input type="search" ng-model="search" placeholder="Search"></p>
+    <table class="table table-striped">
+        <thead>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        </thead>
+            <tr ng-repeat="j in p | filter: search">
+                <td>{{j.pcode}}</td>
+                <td>{{j.pname}}</td>
+                <td>{{j.price}}</td>
+            </tr>
+    </table>
+    </div>
+</div>
+</body>
+</html>

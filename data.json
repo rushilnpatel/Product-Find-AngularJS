@@ -1,0 +1,28 @@
+[
+  {
+    "pcode" : "E91",
+    "pname":"Apple Iphone 7 plus",
+    "price":"$868"
+  },
+  {
+    "pcode" : "E92",
+    "pname":"Samsung Galaxy S8",
+    "price":"$900"
+  },
+  {
+    "pcode" : "E93",
+    "pname":"LG V10",
+    "price":"$749"
+  },
+  {
+    "pcode" : "E94",
+    "pname":"Google Pixel",
+    "price":"$960"
+  },
+  {
+    "pcode" : "E95",
+    "pname":"Apple Iphone 8",
+    "price":"$1200"
+  }
+]
+
